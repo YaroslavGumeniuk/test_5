@@ -5,6 +5,7 @@
         assets.addCss('/css/homePage.css');
     </isscript>
 
+    <p>Use of prepend/append/replace using viewData: ${pdict.param1}</p>
     <!-- +1.888.555.0199 -->
     <!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
     <div class="home-main homepage">
@@ -13,8 +14,7 @@
 
 
     <div class="container home-categories homepage">
-        <p>Hello from custom homePage.isml !!!!!</p>
-        <p>Hello World from site ${pdict.param1}</p>
+        <p>From custom homePage.isml !!!!!</p>
         <div class="row home-main-categories no-gutters">
             <isslot id="home-categories-m" description="Categories slots on the home page." context="global" />
         </div>
