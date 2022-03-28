@@ -14,6 +14,7 @@
 
     <div class="container home-categories homepage">
         <p>Hello from custom homePage.isml !!!!!</p>
+        <p>Hello World from site ${pdict.param1}</p>
         <div class="row home-main-categories no-gutters">
             <isslot id="home-categories-m" description="Categories slots on the home page." context="global" />
         </div>
