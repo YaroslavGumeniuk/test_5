@@ -1,8 +1,11 @@
 <header>
     <isinclude template="/components/header/skipNav" />
+    <isset name="accountHelpers" value="${require('*/cartridge/scripts/account/accountHelpers.js')}" scope="page" />
+
     <div class="header-banner slide-up d-none">
         <div class="container">
-            <p>!!!!! 5.1 !!!!!!</p>
+            <p>${accountHelpers.getRandomString('Works')}</p>
+            <p>${pdict.randomString}</p>
             <div class="d-flex justify-content-between">
                 <div></div>
                 <div class="content">
