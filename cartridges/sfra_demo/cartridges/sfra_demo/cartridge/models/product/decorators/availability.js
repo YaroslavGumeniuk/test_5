@@ -31,5 +31,6 @@ function getATSMessage(availabilityModel) {
             )
         );
     }
+
     return ATS;
 }
