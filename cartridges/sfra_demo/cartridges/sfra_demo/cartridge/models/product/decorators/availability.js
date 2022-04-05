@@ -11,6 +11,7 @@ module.exports = function (object, quantity, minOrderQuantity, availabilityModel
     // Define a new property in the model with ATS as its value
     Object.defineProperty(object, 'ats', {
         enumerable: true,
+        writable: true,
         value: getATSMessage(availabilityModel)
     });
 };
