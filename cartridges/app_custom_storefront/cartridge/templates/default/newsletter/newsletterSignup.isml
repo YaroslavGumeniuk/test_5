@@ -30,9 +30,8 @@
                             <label class="form-control-label">
                                 <isprint value="${pdict.newsletterForm.email.label}" encoding="htmlcontent" />
                             </label>
-                            <input type="email" class="form-control" id="newsletter-form-email"
-                                data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form', 'forms', null)}"
-                                <isprint value="${pdict.newsletterForm.email.attributes}" encoding="off" />>
+                            <input type="email" class="form-control" id="newsletter-form-email" <isprint
+                                value="${pdict.newsletterForm.email.attributes}" encoding="off" />>
                             <div class="invalid-feedback"></div>
                         </div>
                         <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
