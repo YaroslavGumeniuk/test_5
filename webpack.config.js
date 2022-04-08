@@ -26,22 +26,21 @@ module.exports = [{
     entry: jsFiles,
     output: {
         path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+        // path: path.resolve('./cartridges/app_custom_storefront/cartridge/static'),
         filename: '[name].js'
     },
     module: {
-        rules: [
-            {
-                test: /bootstrap(.)*\.js$/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/env'],
-                        plugins: ['@babel/plugin-proposal-object-rest-spread'],
-                        cacheDirectory: true
-                    }
+        rules: [{
+            test: /bootstrap(.)*\.js$/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/env'],
+                    plugins: ['@babel/plugin-proposal-object-rest-spread'],
+                    cacheDirectory: true
                 }
             }
-        ]
+        }]
     },
     plugins: [new webpack.ProvidePlugin(bootstrapPackages)]
 }, {
@@ -50,6 +49,7 @@ module.exports = [{
     entry: scssFiles,
     output: {
         path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+        // path: path.resolve('./cartridges/app_custom_storefront/cartridge/static'),
         filename: '[name].css'
     },
     module: {
@@ -82,6 +82,8 @@ module.exports = [{
         }]
     },
     plugins: [
-        new ExtractTextPlugin({ filename: '[name].css' })
+        new ExtractTextPlugin({
+            filename: '[name].css'
+        })
     ]
 }];
