@@ -59,6 +59,9 @@ server.post(
                         co.custom.firstName = newsletterForm.fname.value;
                         co.custom.lastName = newsletterForm.lname.value;
 
+                        // Use a hook to send a confirmation email
+                        dw.system.HookMgr.callHook('newsletter.email', 'send', newsletterForm.email.value);
+
                         res.json({
                             success: true,
                             redirectUrl: URLUtils.url('Newsletter-Success').toString()
